@@ -21,6 +21,11 @@ export function NavBar() {
             Home
           </li>
           <li 
+            className={pathname === '/resources' ? styles.active : ''} 
+            onClick={() => switchPage('/resources')}>
+            Recursos
+          </li>
+          <li 
             className={pathname === '/about' ? styles.active : ''} 
             onClick={() => switchPage('/about')}>
             Sobre

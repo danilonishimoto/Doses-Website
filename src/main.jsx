@@ -6,6 +6,7 @@ import { Home } from "./pages/home/Home";
 import { About } from "./pages/about/About";
 import { AppLayout } from "./layouts/AppLayout";
 import ClickSpark from "./bits/CursorPointer/CursorPointer.jsx";
+import { Resources } from "./pages/resources/Resources.jsx"
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -20,6 +21,7 @@ createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="/" element={<AppLayout />}>
             <Route index element={<Home />} />
+            <Route path="/resources" element={<Resources />} />
             <Route path="/about" element={<About />} />
           </Route>
         </Routes>
