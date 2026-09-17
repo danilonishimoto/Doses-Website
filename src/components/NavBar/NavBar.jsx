@@ -23,7 +23,7 @@ export function NavBar() {
           <li 
             className={pathname === '/about' ? styles.active : ''} 
             onClick={() => switchPage('/about')}>
-            About
+            Sobre
           </li>
         </ul>
       </nav>

@@ -30,9 +30,20 @@ export function Home() {
           </div>
           <div className={styles.heroImages}>
             <img src={phones} />
-            <Blur style={{ right: "-123px", top: "120px" }} />
+            <Blur
+              style={{
+                right: "clamp(-123px, -18vw, -40px)",
+                top: "clamp(80px, 12vw, 120px)",
+              }}
+            />
           </div>
-          <Blur style={{ left: "-123px", bottom: "0px" }} />
+
+          <Blur
+            style={{
+              left: "clamp(-123px, -18vw, -40px)",
+              bottom: "clamp(0px, 4vw, 40px)",
+            }}
+          />
         </section>
       </div>
     </>

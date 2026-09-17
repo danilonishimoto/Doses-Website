@@ -1,0 +1,49 @@
+.footer {
+  height: 250px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--primary-color);
+  border-top: 1px solid black;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 0 100px;
+}
+
+.application {
+  display: flex;
+  flex-direction: column;
+  max-width: 260px;
+  height: 140px;
+  gap: 16px;
+}
+
+.application img {
+  max-width: 200px;
+  height: 140px;
+}
+
+.application p {
+  color: white;
+  font-size: 16px;
+}
+
+.stickers {
+  position: relative;
+  width: 100%;
+  min-height: 240px;
+  overflow: hidden;
+}
+
+.stickers :global(.draggable) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 900px) {
+  .stickers {
+    min-height: 210px;
+  }
+}
+
