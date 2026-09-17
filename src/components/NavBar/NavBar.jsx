@@ -13,7 +13,7 @@ export function NavBar() {
   return (
     <>
       <nav className={styles.navbar}>
-        <img src={logo} className={styles.logo}/>
+        <img src={logo} className={styles.logo} onClick={() => switchPage('/')}/>
         <ul className={styles.navLinks}>
           <li 
             className={pathname === '/' ? styles.active : ''} 

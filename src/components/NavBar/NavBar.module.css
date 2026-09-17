@@ -16,6 +16,10 @@
   height: 54px;
 }
 
+.logo:hover {
+  cursor: pointer;
+}
+
 .navLinks {
   all: unset;
   display: flex;
