@@ -22,7 +22,7 @@ export function Home() {
               </GradientText>
               {} de tomar o remédio
             </h1>
-            <p>
+            <p style={{ marginBottom: '10px' }}>
               Tenha maior controle da sua saúde e de que você ama com o app
               Doses.{" "}
             </p>
