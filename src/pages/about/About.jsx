@@ -3,6 +3,8 @@ import background from "../../assets/concrete-background.jpg";
 import Lanyard from "../../bits/lanyard/Lanyard";
 import frontDanilo from "../../assets/id-front-danilo.svg";
 import frontLeticia from "../../assets/id-front-leticia.svg";
+import frontGiovanna from '../../assets/id-front-giovanna.svg'
+import frontAika from '../../assets/id-front-aika.svg'
 import back from "../../assets/id-back.svg";
 import lanyardImage from "../../assets/lanyard-image.png";
 import LeftArrow from "../../assets/left-arrow.svg";
@@ -15,7 +17,7 @@ import OldPerson from '../../assets/old-person.png'
 
 export function About() {
   const [teamImageIndex, setTeamImageIndex] = useState(0);
-  const teamImage = [frontDanilo, frontLeticia];
+  const teamImage = [frontDanilo, frontGiovanna, frontAika, frontLeticia];
 
   const previousTeamImage = () => {
     if (teamImageIndex === 0) setTeamImageIndex(teamImage.length - 1);
