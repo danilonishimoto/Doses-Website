@@ -9,12 +9,14 @@ export function ResourceItem({ titulo, data, descricao, arquivo, id, grupo }) {
           {id}. {titulo}
         </h2>
         <Button onClick={() => window.open(arquivo, "_blank")}>
-          Abrir arquivo
+          <a href={arquivo} target="_blank" rel="noopener noreferrer" style={{ all: "unset"}}>
+            Abrir arquivo
+          </a>
         </Button>
       </div>
       <div className={styles.seminaryInfo}>
         <p>Grupo: {grupo}</p>
-        <div className={styles.seminaryDivider}/>
+        <div className={styles.seminaryDivider} />
         <p>Data de entrega: {data}</p>
       </div>
       <div className={styles.seminaryContent}>
