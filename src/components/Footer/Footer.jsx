@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./Footer.module.css";
-import Logo from "../../assets/logo-white.svg";
+import Logo from "../../assets/images/logo-white.svg";
 import StickerPeel from "../../bits/StickerPeel/StickerPeel.jsx";
-import PillMinion from "../../assets/pill-minion-sticker.svg";
-import Pill from "../../assets/pill-sticker.svg";
-import Doses from "../../assets/doses-sticker.svg";
-import Noti from "../../assets/noti-sticker.svg";
-import ClockMinion from "../../assets/clock-minion-sticker.svg";
+import PillMinion from "../../assets/images/pill-minion-sticker.svg";
+import Pill from "../../assets/images/pill-sticker.svg";
+import Doses from "../../assets/images/doses-sticker.svg";
+import Noti from "../../assets/images/noti-sticker.svg";
+import ClockMinion from "../../assets/images/clock-minion-sticker.svg";
 
 export function Footer() {
   const stickersRef = useRef(null);

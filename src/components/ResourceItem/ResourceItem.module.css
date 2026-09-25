@@ -1,0 +1,51 @@
+.resourceItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.resourceItemHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seminaryTitle {
+  color: #000;
+  font-family: var(--headline-font);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90%;
+}
+
+.seminaryInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.seminaryDivider {
+  width: 1px;
+  height: 100%;
+  background-color: lightgray;
+}
+
+.seminaryInfo p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #3b3939;
+  width: fit-content;
+}
+
+.seminaryContent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}

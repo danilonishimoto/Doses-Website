@@ -47,41 +47,8 @@ line-height: normal;
   gap: 24px;
 }
 
-.seminaryTitle {
-  color: #000;
-  font-family: var(--headline-font);
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 90%;
-}
-
-.seminaryInfo {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.seminaryInfo p {
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  color: #3b3939;
-  border-right: 1px solid black;
-  padding-right: 20px;
-}
-
-.seminaryContent {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.seminaryImage {
+.seminariesDivider {
+  height: 1px;
   width: 100%;
-  align-self: stretch;
-  min-height: 400px;
-  border-radius: 50px;
-  background-color: #E1E1E1;
+  background-color: lightgray;
 }

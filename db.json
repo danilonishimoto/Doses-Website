@@ -1,0 +1,12 @@
+{
+  "resources": [
+    {
+      "id": 1,
+      "grupo": 1,
+      "titulo": "Termo de Abertura do Projeto (TAP)",
+      "descricao": "Entrega referente ao seminário apresentado pelo Grupo 1 sobre o tema Escopo. O documento consiste na elaboração de um Termo de Abertura do Projeto (TAP), que tem como objetivo formalizar o início do projeto e estabelecer suas principais diretrizes. Nele, são apresentadas informações relevantes para o desenvolvimento do projeto, como seu propósito, objetivos, justificativa, requisitos iniciais, principais partes interessadas, premissas, restrições e demais especificações necessárias para orientar sua execução.",
+      "pdf": "/pdfs/entrega-1.pdf",
+      "data": "25/09/2026"
+    }
+  ]
+}

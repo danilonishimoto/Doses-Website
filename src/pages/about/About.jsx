@@ -1,19 +1,19 @@
 import styles from "./About.module.css";
-import background from "../../assets/concrete-background.jpg";
+import background from "../../assets/images/concrete-background.jpg";
 import Lanyard from "../../bits/lanyard/Lanyard";
-import frontDanilo from "../../assets/id-front-danilo.svg";
-import frontLeticia from "../../assets/id-front-leticia.svg";
-import frontGiovanna from '../../assets/id-front-giovanna.svg'
-import frontAika from '../../assets/id-front-aika.svg'
-import back from "../../assets/id-back.svg";
-import lanyardImage from "../../assets/lanyard-image.png";
-import LeftArrow from "../../assets/left-arrow.svg";
-import RightArrow from "../../assets/right-arrow.svg";
+import frontDanilo from "../../assets/images/id-front-danilo.svg";
+import frontLeticia from "../../assets/images/id-front-leticia.svg";
+import frontGiovanna from '../../assets/images/id-front-giovanna.svg'
+import frontAika from '../../assets/images/id-front-aika.svg'
+import back from "../../assets/images/id-back.svg";
+import lanyardImage from "../../assets/images/lanyard-image.png";
+import LeftArrow from "../../assets/images/left-arrow.svg";
+import RightArrow from "../../assets/images/right-arrow.svg";
 import { useState } from "react";
 import { Card } from "../../components/Card/Card";
-import PillsImage from "../../assets/pills-image.png";
-import DosesMockup from '../../assets/doses-mockup.png'
-import OldPerson from '../../assets/old-person.png'
+import PillsImage from "../../assets/images/pills-image.png";
+import DosesMockup from '../../assets/images/doses-mockup.png'
+import OldPerson from '../../assets/images/old-person.png'
 
 export function About() {
   const [teamImageIndex, setTeamImageIndex] = useState(0);

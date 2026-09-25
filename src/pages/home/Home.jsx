@@ -1,7 +1,7 @@
 import styles from "./Home.module.css";
 import { Button } from "../../components/Button/Button";
 import GradientText from "../../bits/GradientText/GradientText";
-import phones from "../../assets/phone-mockups.png";
+import phones from "../../assets/images/phone-mockups.png";
 import { Blur } from "../../components/Blur/Blur";
 
 export function Home() {

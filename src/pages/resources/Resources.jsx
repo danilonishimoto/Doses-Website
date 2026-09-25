@@ -1,7 +1,18 @@
 import styles from "./Resources.module.css";
 import LineSidebar from "../../bits/LineSidebar/LineSidebar";
+import { useQuery } from "@tanstack/react-query";
+import { getResources } from "../../actions/resources";
+import { ResourceItem } from "../../components/ResourceItem/ResourceItem";
+
+// Criar em modelo de formulário e seção, com um botão para adicionar nova seção.
+
 
 export function Resources() {
+  const { data, isLoading, isError } = useQuery({
+     queryKey: ["events"],
+     queryFn: getResources
+   });
+
   return (
     <div className={styles.resources}>
       <div className={styles.heading}>
@@ -47,17 +58,21 @@ export function Resources() {
           />
         </div>
         <div className={styles.seminaries}>
-          <h2 className={styles.seminaryTitle}>
-            00. Título
-          </h2>
-          <div className={styles.seminaryInfo}>
-            <p>Grupo: X</p>
-            <p>Data: DD/MM/YYYY</p>
-          </div>
-          <div className={styles.seminaryContent}>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <div className={styles.seminaryImage} /> 
-          </div>
+          {(!isLoading && !isError) && data.map((resource) => {
+            return (
+              <> 
+              <ResourceItem
+                data={resource.data}
+                titulo={resource.titulo}
+                descricao={resource.descricao}
+                arquivo={resource.pdf}
+                id={resource.id}
+                grupo={resource.grupo}
+              />
+              <div className={styles.seminariesDivider}/>
+              </>
+            )
+          })}
         </div>
       </div>
     </div>
