@@ -4,9 +4,6 @@ import { useQuery } from "@tanstack/react-query";
 import { getResources } from "../../actions/resources";
 import { ResourceItem } from "../../components/ResourceItem/ResourceItem";
 
-// Criar em modelo de formulário e seção, com um botão para adicionar nova seção.
-
-
 export function Resources() {
   const { data, isLoading, isError } = useQuery({
      queryKey: ["events"],
@@ -36,7 +33,7 @@ export function Resources() {
               "Riscos",
               "Aquisições",
               "Partes interessadas e integração",
-              "Prince 2"
+              "PRINCE2"
             ]}
             accentColor="#7EDCB9"
             textColor="#000000"
