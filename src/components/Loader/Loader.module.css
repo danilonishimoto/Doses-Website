@@ -1,0 +1,55 @@
+.loader {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .minions {
+    display: flex;
+  }
+
+  .minion {
+    width: 72px;
+    height: 63px;
+    animation: bounce 0.9s ease-in-out infinite;
+    /* filter: drop-shadow(0 8px 6px rgba(0,0,0,0.02)); */
+  }
+
+  .minion svg { width: 100%; height: 100%; display: block; overflow: visible; }
+
+  .minion:nth-child(1) { animation-delay: 0s; }
+  .minion:nth-child(2) { animation-delay: 0.2s; }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-24px) scale(1.04); }
+  }
+
+  .label {
+    color: gray;
+    font-family: var(--body-font);
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    opacity: 0.75;
+  }
+
+  .label .dots span {
+    animation: blink 1.4s infinite;
+    opacity: 0;
+    color: gray;
+  }
+  .label .dots span:nth-child(1) { animation-delay: 0s; }
+  .label .dots span:nth-child(2) { animation-delay: 0.2s; }
+  .label .dots span:nth-child(3) { animation-delay: 0.4s; }
+
+  @keyframes blink {
+    0%, 20% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .minion, .label .dots span { animation: none; }
+  }

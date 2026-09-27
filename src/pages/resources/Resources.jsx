@@ -3,6 +3,7 @@ import LineSidebar from "../../bits/LineSidebar/LineSidebar";
 import { useQuery } from "@tanstack/react-query";
 import { getResources } from "../../actions/resources";
 import { ResourceItem } from "../../components/ResourceItem/ResourceItem";
+import { Loader } from "../../components/Loader/Loader";
 
 export function Resources() {
   const { data, isLoading, isError } = useQuery({
@@ -55,7 +56,13 @@ export function Resources() {
           />
         </div>
         <div className={styles.seminaries}>
-          {(!isLoading && !isError) && data.map((resource) => {
+                    {(isLoading && !isError) && <>
+          <div className={styles.loaderContainer}>
+            <Loader/>
+          </div>
+        </>}
+
+          {(!isLoading) && data.map((resource) => {
             return (
               <> 
               <ResourceItem

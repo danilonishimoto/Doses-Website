@@ -24,6 +24,7 @@
   display: flex;
   flex-direction: row;
   gap: 40px;
+  height: 100%;
 }
 
 .summary {
@@ -51,4 +52,13 @@ line-height: normal;
   height: 1px;
   width: 100%;
   background-color: lightgray;
+}
+
+.loaderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    flex: 1;
+  height: 100%;
+  width: 100%;
 }
