@@ -9,15 +9,24 @@ import back from "../../assets/images/id-back.svg";
 import lanyardImage from "../../assets/images/lanyard-image.png";
 import LeftArrow from "../../assets/images/left-arrow.svg";
 import RightArrow from "../../assets/images/right-arrow.svg";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Card } from "../../components/Card/Card";
+import { MemberCard } from "../../components/MemberCard/MemberCard";
 import PillsImage from "../../assets/images/pills-image.png";
 import DosesMockup from '../../assets/images/doses-mockup.png'
 import OldPerson from '../../assets/images/old-person.png'
 
 export function About() {
   const [teamImageIndex, setTeamImageIndex] = useState(0);
+  const [isLanyardHovered, setIsLanyardHovered] = useState(false);
+  const memberCardRef = useRef(null);
   const teamImage = [frontDanilo, frontGiovanna, frontAika, frontLeticia];
+  const memberDescriptions = [
+    "Olá! Sou Danilo Nishimoto, estudante de Sistemas de Informação na USP. Gosto de explorar novas tecnologias, buscar soluções inovadoras e estar sempre aprendendo. No meu tempo livre, gosto de acompanhar futebol principalmente do meu time de coração, o Palmeiras.",
+    "Integrante da equipe Doses e estudante de Sistemas de Informação da USP.",
+    "Integrante da equipe Doses e estudante de Sistemas de Informação da USP.",
+    "Olá, sou Letícia Honda, estudante de Sistemas de Informação na USP e apaixonada por tecnologia, livros, jogos e novos desafios. Sou do interior de São Paulo e vim para a capital para estudar e iniciar minha carreira. Apesar de ser introvertida e tímida, adoro conhecer pessoas e novos ambientes!"
+  ];
 
   const previousTeamImage = () => {
     if (teamImageIndex === 0) setTeamImageIndex(teamImage.length - 1);
@@ -27,6 +36,24 @@ export function About() {
   const nextTeamImage = () => {
     if (teamImageIndex === teamImage.length - 1) setTeamImageIndex(0);
     else setTeamImageIndex((prev) => prev + 1);
+  };
+
+  const updateMemberCardPosition = (x, y) => {
+    const memberCard = memberCardRef.current;
+    const area = memberCard?.offsetParent;
+    if (!memberCard || !area) return;
+
+    const areaBounds = area.getBoundingClientRect();
+    const anchorX = Math.max(0, Math.min(x - areaBounds.left, areaBounds.width));
+    const anchorY = y - areaBounds.top;
+    const cardWidth = memberCard.offsetWidth;
+    const minLeft = Math.max(0, anchorX - cardWidth + 18);
+    const maxLeft = Math.max(minLeft, Math.min(anchorX, areaBounds.width - cardWidth));
+    const left = Math.min(Math.max(anchorX - 18, minLeft), maxLeft);
+
+    memberCard.style.left = `${left}px`;
+    memberCard.style.top = `${anchorY - 18}px`;
+    memberCard.style.setProperty('--member-card-tail-x', `${anchorX - left}px`);
   };
 
   return (
@@ -40,22 +67,33 @@ export function About() {
               de Informação da USP para disciplinas ministradas durante o 6º
               período.
             </p>
-            <p>Clique nas setas para conhecer nosso time.</p>
+            <p>Clique nas setas para conhecer nosso time e coloque o cursor em cima dos crachás para ver informações sobre cada um.</p>
           </div>
           <div
             className={styles.team}
             style={{ backgroundImage: `url(${background})` }}
           >
             <img src={LeftArrow} onClick={previousTeamImage} />
-            <Lanyard
-              position={[0, 0, 20]}
-              gravity={[0, -40, 0]}
-              frontImage={teamImage[teamImageIndex]}
-              backImage={back}
-              imageFit="cover"
-              lanyardImage={lanyardImage}
-              lanyardWidth={2}
-            />
+            <div
+              className={styles.lanyardArea}
+            >
+              <Lanyard
+                position={[0, 0, 20]}
+                gravity={[0, -40, 0]}
+                frontImage={teamImage[teamImageIndex]}
+                backImage={back}
+                imageFit="cover"
+                lanyardImage={lanyardImage}
+                lanyardWidth={2}
+                onCardHoverChange={setIsLanyardHovered}
+                onCardPositionChange={updateMemberCardPosition}
+              />
+              <MemberCard
+                elementRef={memberCardRef}
+                text={memberDescriptions[teamImageIndex]}
+                isVisible={isLanyardHovered}
+              />
+            </div>
             <img src={RightArrow} onClick={nextTeamImage} />
           </div>
         </div>

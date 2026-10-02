@@ -75,6 +75,13 @@
   cursor: pointer;
 }
 
+.lanyardArea {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+}
+
 .application {
   padding-bottom: 80px;
 }

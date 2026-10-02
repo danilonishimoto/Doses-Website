@@ -35,7 +35,9 @@ export default function Lanyard({
   backImage = null,
   imageFit = 'cover',
   lanyardImage = null,
-  lanyardWidth = 1
+  lanyardWidth = 1,
+  onCardHoverChange,
+  onCardPositionChange
 }) {
   const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < 768);
 
@@ -62,6 +64,8 @@ export default function Lanyard({
             imageFit={imageFit}
             lanyardImage={lanyardImage}
             lanyardWidth={lanyardWidth}
+            onCardHoverChange={onCardHoverChange}
+            onCardPositionChange={onCardPositionChange}
           />
         </Physics>
         <Environment blur={0.75}>
@@ -106,20 +110,30 @@ function Band({
   backImage = null,
   imageFit = 'cover',
   lanyardImage = null,
-  lanyardWidth = 1
+  lanyardWidth = 1,
+  onCardHoverChange,
+  onCardPositionChange
 }) {
   const band = useRef(),
     fixed = useRef(),
     j1 = useRef(),
     j2 = useRef(),
     j3 = useRef(),
-    card = useRef();
+    card = useRef(),
+    badgeMesh = useRef();
   const vec = new THREE.Vector3(),
     ang = new THREE.Vector3(),
     rot = new THREE.Vector3(),
     dir = new THREE.Vector3();
   const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 4, linearDamping: 4 };
   const { nodes, materials } = useGLTF(cardGLB);
+  const badgeAnchor = useMemo(() => {
+    const geometry = nodes.card.geometry;
+    if (!geometry.boundingBox) geometry.computeBoundingBox();
+    const { max } = geometry.boundingBox;
+    return new THREE.Vector3(max.x, max.y, max.z);
+  }, [nodes.card.geometry]);
+  const projectedBadgeAnchor = useMemo(() => new THREE.Vector3(), []);
   const texture = useTexture(lanyardImage || lanyard);
   // useTexture must be called unconditionally; use a blank pixel when an image
   // isn't supplied for a given face, then skip compositing it below.
@@ -227,6 +241,17 @@ function Band({
       rot.copy(card.current.rotation());
       card.current.setAngvel({ x: ang.x, y: ang.y - rot.y * 0.25, z: ang.z });
     }
+    if (hovered && badgeMesh.current && onCardPositionChange) {
+      const canvasBounds = state.gl.domElement.getBoundingClientRect();
+      projectedBadgeAnchor
+        .copy(badgeAnchor)
+        .applyMatrix4(badgeMesh.current.matrixWorld)
+        .project(state.camera);
+      onCardPositionChange(
+        canvasBounds.left + ((projectedBadgeAnchor.x + 1) / 2) * canvasBounds.width,
+        canvasBounds.top + ((1 - projectedBadgeAnchor.y) / 2) * canvasBounds.height
+      );
+    }
   });
 
   return (
@@ -247,15 +272,24 @@ function Band({
           <group
             scale={2.25}
             position={[0, -1.2, -0.05]}
-            onPointerOver={() => hover(true)}
-            onPointerOut={() => hover(false)}
             onPointerUp={e => (e.target.releasePointerCapture(e.pointerId), drag(false))}
             onPointerDown={e => (
               e.target.setPointerCapture(e.pointerId),
               drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation())))
             )}
           >
-            <mesh geometry={nodes.card.geometry}>
+            <mesh
+              ref={badgeMesh}
+              geometry={nodes.card.geometry}
+              onPointerOver={() => {
+                hover(true);
+                onCardHoverChange?.(true);
+              }}
+              onPointerOut={() => {
+                hover(false);
+                onCardHoverChange?.(false);
+              }}
+            >
               <meshPhysicalMaterial
                 map={cardMap}
                 map-anisotropy={16}
@@ -265,8 +299,17 @@ function Band({
                 metalness={0.8}
               />
             </mesh>
-            <mesh geometry={nodes.clip.geometry} material={materials.metal} material-roughness={0.3} />
-            <mesh geometry={nodes.clamp.geometry} material={materials.metal} />
+            <mesh
+              geometry={nodes.clip.geometry}
+              material={materials.metal}
+              material-roughness={0.3}
+              onPointerOver={event => event.stopPropagation()}
+            />
+            <mesh
+              geometry={nodes.clamp.geometry}
+              material={materials.metal}
+              onPointerOver={event => event.stopPropagation()}
+            />
           </group>
         </RigidBody>
       </group>
