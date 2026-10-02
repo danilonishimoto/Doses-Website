@@ -25,7 +25,7 @@ export function About() {
     "Olá! Sou Danilo Nishimoto, estudante de Sistemas de Informação na USP. Gosto de explorar novas tecnologias e linguagens. No meu tempo livre, gosto de acompanhar futebol principalmente do meu time de coração, o Palmeiras.",
     "Integrante da equipe Doses e estudante de Sistemas de Informação da USP.",
     "Integrante da equipe Doses e estudante de Sistemas de Informação da USP.",
-    "Olá, sou Letícia Honda, estudante de Sistemas de Informação na USP e apaixonada por tecnologia, livros, jogos e novos desafios. Sou do interior de São Paulo e vim para a capital para estudar e iniciar minha carreira. Apesar de ser introvertida e tímida, adoro conhecer pessoas e novos ambientes!"
+    "Olá, sou Letícia Honda, estudante de Sistemas de Informação na USP e apaixonada por tecnologia, livros, jogos e novos desafios. Apesar de ser introvertida e tímida, adoro conhecer pessoas e novos ambientes!"
   ];
 
   const previousTeamImage = () => {
