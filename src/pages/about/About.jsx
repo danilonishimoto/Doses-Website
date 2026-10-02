@@ -22,7 +22,7 @@ export function About() {
   const memberCardRef = useRef(null);
   const teamImage = [frontDanilo, frontGiovanna, frontAika, frontLeticia];
   const memberDescriptions = [
-    "Olá! Sou Danilo Nishimoto, estudante de Sistemas de Informação na USP. Gosto de explorar novas tecnologias, buscar soluções inovadoras e estar sempre aprendendo. No meu tempo livre, gosto de acompanhar futebol principalmente do meu time de coração, o Palmeiras.",
+    "Olá! Sou Danilo Nishimoto, estudante de Sistemas de Informação na USP. Gosto de explorar novas tecnologias e linguagens. No meu tempo livre, gosto de acompanhar futebol principalmente do meu time de coração, o Palmeiras.",
     "Integrante da equipe Doses e estudante de Sistemas de Informação da USP.",
     "Integrante da equipe Doses e estudante de Sistemas de Informação da USP.",
     "Olá, sou Letícia Honda, estudante de Sistemas de Informação na USP e apaixonada por tecnologia, livros, jogos e novos desafios. Sou do interior de São Paulo e vim para a capital para estudar e iniciar minha carreira. Apesar de ser introvertida e tímida, adoro conhecer pessoas e novos ambientes!"
