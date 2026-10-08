@@ -62,7 +62,7 @@ export function Resources() {
           </div>
         </>}
 
-          {(!isLoading) && data.map((resource) => {
+          {(!isLoading) && data?.map((resource) => {
             return (
               <> 
               <ResourceItem

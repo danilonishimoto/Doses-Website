@@ -7,6 +7,22 @@
       "descricao": "Entrega referente ao seminário apresentado pelo Grupo 1 sobre o tema Escopo. O documento consiste na elaboração de um Termo de Abertura do Projeto (TAP), que tem como objetivo formalizar o início do projeto e estabelecer suas principais diretrizes. Nele, são apresentadas informações relevantes para o desenvolvimento do projeto, como seu propósito, objetivos, justificativa, requisitos iniciais, principais partes interessadas, premissas, restrições e demais especificações necessárias para orientar sua execução.",
       "pdf": "/pdfs/entrega-1.pdf",
       "data": "25/09/2026"
+    }, 
+    {
+      "id": 2,
+      "grupo": 4,
+      "titulo": "Plano de Gerenciamento de Qualidade e Quality Checklist",
+      "descricao": "Entrega referente ao seminário apresentado pelo Grupo 4 sobre o tema Qualidade. O documento consiste na elaboração de um Plano de Gerenciamento da Qualidade e de um Quality Checklist, que têm como objetivo estabelecer diretrizes e critérios para assegurar a qualidade das entregas do projeto. Neles, são apresentadas as práticas, os padrões e os procedimentos necessários para orientar o controle da qualidade, bem como uma lista de verificação para avaliar a conformidade das entregas com os requisitos e critérios estabelecidos.",
+      "pdf": "/pdfs/entrega-2.pdf",
+      "data": "08/10/2026"
+    },
+    {
+      "id": 3,
+      "grupo": 8,
+      "titulo": "Atividade aplicada de Gestão de Recursos",
+      "descricao": "Entrega referente ao seminário apresentado pelo Grupo 8 sobre o tema Recursos. O documento consiste na elaboração de uma atividade aplicada de Gestão de Recursos, que tem como objetivo aplicar os conceitos e técnicas de gestão de recursos no contexto do projeto. Nele, são apresentadas as estratégias e medidas necessárias para otimizar o uso dos recursos disponíveis, bem como os procedimentos para monitorar e controlar sua alocação durante a execução do projeto.",
+      "pdf": "/pdfs/entrega-3.pdf",
+      "data": "08/10/2026"
     }
   ]
 }
