@@ -26,15 +26,8 @@ export function Resources() {
           <LineSidebar
             items={[
               "Escopo",
-              "Tempo",
-              "Custo",
               "Qualidade",
-              "Recursos",
-              "Comunicações",
-              "Riscos",
-              "Aquisições",
-              "Partes interessadas e integração",
-              "PRINCE2"
+              "Recursos"
             ]}
             accentColor="#7EDCB9"
             textColor="#000000"
