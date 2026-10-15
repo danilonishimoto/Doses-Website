@@ -7,9 +7,9 @@ import { Loader } from "../../components/Loader/Loader";
 
 export function Resources() {
   const { data, isLoading, isError } = useQuery({
-     queryKey: ["events"],
-     queryFn: getResources
-   });
+    queryKey: ["events"],
+    queryFn: getResources,
+  });
 
   return (
     <div className={styles.resources}>
@@ -24,11 +24,7 @@ export function Resources() {
         <div className={styles.summary}>
           <p className={styles.summaryTitle}>Sumário.</p>
           <LineSidebar
-            items={[
-              "Escopo",
-              "Qualidade",
-              "Recursos"
-            ]}
+            items={["Escopo", "Qualidade", "Recursos", "Custos"]}
             accentColor="#7EDCB9"
             textColor="#000000"
             markerColor="#3b3939"
@@ -49,27 +45,30 @@ export function Resources() {
           />
         </div>
         <div className={styles.seminaries}>
-                    {(isLoading && !isError) && <>
-          <div className={styles.loaderContainer}>
-            <Loader/>
-          </div>
-        </>}
+          {isLoading && !isError && (
+            <>
+              <div className={styles.loaderContainer}>
+                <Loader />
+              </div>
+            </>
+          )}
 
-          {(!isLoading) && data?.map((resource) => {
-            return (
-              <> 
-              <ResourceItem
-                data={resource.data}
-                titulo={resource.titulo}
-                descricao={resource.descricao}
-                arquivo={resource.pdf}
-                id={resource.id}
-                grupo={resource.grupo}
-              />
-              <div className={styles.seminariesDivider}/>
-              </>
-            )
-          })}
+          {!isLoading &&
+            data?.map((resource) => {
+              return (
+                <>
+                  <ResourceItem
+                    data={resource.data}
+                    titulo={resource.titulo}
+                    descricao={resource.descricao}
+                    arquivo={resource.pdf}
+                    id={resource.id}
+                    grupo={resource.grupo}
+                  />
+                  <div className={styles.seminariesDivider} />
+                </>
+              );
+            })}
         </div>
       </div>
     </div>
