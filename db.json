@@ -23,6 +23,14 @@
       "descricao": "Entrega referente ao seminário apresentado pelo Grupo 8 sobre o tema Recursos. O documento consiste na elaboração de uma atividade aplicada de Gestão de Recursos, que tem como objetivo aplicar os conceitos e técnicas de gestão de recursos no contexto do projeto. Nele, são apresentadas as estratégias e medidas necessárias para otimizar o uso dos recursos disponíveis, bem como os procedimentos para monitorar e controlar sua alocação durante a execução do projeto.",
       "pdf": "/pdfs/entrega-3.pdf",
       "data": "08/10/2026"
+    },
+    {
+      "id": 4,
+      "grupo": "",
+      "titulo": "Atividade aplicada de Gestão de Custos",
+      "descricao": "Entrega referente ao seminário apresentado pelo Grupo 4 sobre o tema Custos. O documento consiste na elaboração de uma atividade aplicada de Gestão de Custos, que tem como objetivo aplicar os conceitos e técnicas de gestão de custos no contexto do projeto.",
+      "pdf": "/pdfs/entrega-4.pdf",
+      "data": "14/10/2026"
     }
   ]
 }
