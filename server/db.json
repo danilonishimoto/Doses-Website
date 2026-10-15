@@ -10,6 +10,12 @@
     }, 
     {
       "id": 2,
+      "grupo": "7 - Socorro",
+      "titulo": "Cronograma do Projeto",
+      "descricao": "Entrega referente à elaboração do cronograma do projeto por meio de um diagrama de Gantt. A atividade tem como objetivo organizar e visualizar as etapas, tarefas, prazos e dependências do projeto, contribuindo para o planejamento, o acompanhamento e o controle de sua execução."
+    },
+    {
+      "id": 3,
       "grupo": "4 - Varginha",
       "titulo": "Plano de Gerenciamento de Qualidade e Quality Checklist",
       "descricao": "Entrega referente ao seminário apresentado pelo Grupo 4 sobre o tema Qualidade. O documento consiste na elaboração de um Plano de Gerenciamento da Qualidade e de um Quality Checklist, que têm como objetivo estabelecer diretrizes e critérios para assegurar a qualidade das entregas do projeto. Neles, são apresentadas as práticas, os padrões e os procedimentos necessários para orientar o controle da qualidade, bem como uma lista de verificação para avaliar a conformidade das entregas com os requisitos e critérios estabelecidos.",
@@ -17,7 +23,7 @@
       "data": "08/10/2026"
     },
     {
-      "id": 3,
+      "id": 4,
       "grupo": "8 - Brigadeiro",
       "titulo": "Atividade aplicada de Gestão de Recursos",
       "descricao": "Entrega referente ao seminário apresentado pelo Grupo 8 sobre o tema Recursos. O documento consiste na elaboração de uma atividade aplicada de Gestão de Recursos, que tem como objetivo aplicar os conceitos e técnicas de gestão de recursos no contexto do projeto. Nele, são apresentadas as estratégias e medidas necessárias para otimizar o uso dos recursos disponíveis, bem como os procedimentos para monitorar e controlar sua alocação durante a execução do projeto.",
@@ -25,7 +31,7 @@
       "data": "08/10/2026"
     },
     {
-      "id": 4,
+      "id": 5,
       "grupo": "2 - Estudantes",
       "titulo": "Atividade aplicada de Gestão de Custos",
       "descricao": "Entrega referente ao seminário apresentado pelo Grupo 4 sobre o tema Custos. O documento consiste na elaboração de uma atividade aplicada de Gestão de Custos, que tem como objetivo aplicar os conceitos e técnicas de gestão de custos no contexto do projeto.",
