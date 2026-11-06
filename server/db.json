@@ -39,6 +39,14 @@
       "descricao": "Entrega referente ao seminário apresentado pelo Grupo 4 sobre o tema Custos. O documento consiste na elaboração de uma atividade aplicada de Gestão de Custos, que tem como objetivo aplicar os conceitos e técnicas de gestão de custos no contexto do projeto.",
       "pdf": "/pdfs/entrega-5.pdf",
       "data": "14/10/2026"
+    },
+    {
+      "id": 6,
+      "grupo": "10 - Jundiaí",
+      "titulo": "Atividade aplicada de Gestão de Riscos",
+      "descricao": "Entrega referente ao seminário apresentado pelo Grupo 10 sobre o tema Riscos. O documento consiste na elaboração de uma atividade aplicada de Gestão de Riscos, que tem como objetivo aplicar os conceitos e técnicas de gestão de riscos no contexto do projeto.",
+      "pdf": "/pdfs/entrega-6.pdf",
+      "data": "05/11/2026"
     }
   ]
 }
