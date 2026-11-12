@@ -24,7 +24,7 @@ export function Resources() {
         <div className={styles.summary}>
           <p className={styles.summaryTitle}>Sumário.</p>
           <LineSidebar
-            items={["Escopo", "Tempo", "Qualidade", "Recursos", "Custos", "Riscos"]}
+            items={["Escopo", "Tempo", "Qualidade", "Recursos", "Custos", "Riscos", "Aquisições"]}
             accentColor="#7EDCB9"
             textColor="#000000"
             markerColor="#3b3939"

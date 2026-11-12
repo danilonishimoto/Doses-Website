@@ -47,6 +47,14 @@
       "descricao": "Entrega referente ao seminário apresentado pelo Grupo 10 sobre o tema Riscos. O documento consiste na elaboração de uma atividade aplicada de Gestão de Riscos, que tem como objetivo aplicar os conceitos e técnicas de gestão de riscos no contexto do projeto.",
       "pdf": "/pdfs/entrega-6.pdf",
       "data": "05/11/2026"
+    },
+    {
+      "id": 7,
+      "grupo": "9 - República",
+      "titulo": "Atividade aplicada de Gestão de Aquisições",
+      "descricao": "Entrega referente à atividade do Grupo 9 sobre o tema Gestão de Aquisições. O documento consiste na elaboração de artefatos de procurement para o projeto Doses, incluindo RFI e SOW, com o objetivo de aplicar os processos e práticas de planejamento, seleção e contratação de fornecedores de infraestrutura de TI.",
+      "pdf": "/pdfs/entrega-7.pdf",
+      "data": "12/11/2026"
     }
   ]
 }
