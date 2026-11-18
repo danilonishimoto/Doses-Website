@@ -55,6 +55,14 @@
       "descricao": "Entrega referente à atividade do Grupo 9 sobre o tema Gestão de Aquisições. O documento consiste na elaboração de artefatos de procurement para o projeto Doses, incluindo RFI e SOW, com o objetivo de aplicar os processos e práticas de planejamento, seleção e contratação de fornecedores de infraestrutura de TI.",
       "pdf": "/pdfs/entrega-7.pdf",
       "data": "12/11/2026"
+    },
+    {
+      "id": 8,
+      "grupo": "3 - Anhangabaú",
+      "titulo": "Atividade aplicada de Partes Interessadas",
+      "descricao": "Entrega referente à atividade do Grupo 3 sobre o tema Partes Interessadas. O documento consiste na elaboração de uma atividade aplicada de Gestão de Partes Interessadas, que tem como objetivo identificar e engajar todas as partes interessadas no projeto, garantindo sua comunicação eficaz e alinhamento com os objetivos do projeto.",
+      "pdf": "/pdfs/entrega-8.pdf",
+      "data": "19/11/2026"
     }
   ]
 }
